@@ -1,0 +1,260 @@
+@import url("https://fonts.googleapis.com/css2?family=Cabin&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.App {
+  text-align: center;
+  background-color: #ffffff;
+  font-family: "Ariel", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 0 30px 0 30px;
+}
+
+textarea {
+  font-family: "Ariel", sans-serif;
+}
+
+.title {
+  color: #293845;
+  letter-spacing: 5px;
+  font-size: 80px;
+  margin-bottom: 20px;
+}
+
+.subtitle {
+  color: #293845;
+  font-size: 20px;
+  margin-bottom: 60px;
+}
+
+.visualizer {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.callee {
+  color: #1cae9f;
+  font-size: 25px;
+}
+
+.caller {
+  color: #2b88d9;
+  font-size: 25px;
+}
+
+.question {
+  font-size: 35px;
+  color: #a0c6ff;
+}
+
+.options-container {
+  display: flex;
+  flex-direction: row;
+  gap: 70px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.option {
+  text-decoration: none;
+  font-size: 35px;
+}
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.loading-message {
+  font-size: 20px;
+  color: #a0c6ff;
+  margin-bottom: 30px;
+}
+
+.footer {
+  margin-top: 60px;
+  font-size: 20px;
+}
+
+.call-to-action {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 10px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  justify-content: center;
+  align-items: center;
+  min-width: 300px;
+}
+
+.custom-input {
+  border: none;
+  border-bottom: 2px solid #ccc; /* Gray horizontal line */
+  background: transparent; /* Make it transparent */
+  transition: border-color 0.3s; /* Add a smooth transition for the line color */
+  outline: none;
+  padding: 10px;
+  font-size: 16px;
+  width: 100%;
+  resize: none;
+
+  &:focus {
+    border-color: #555; /* Change line color when selected */
+  }
+}
+
+.PhoneInputInput {
+  background: transparent;
+  border: none;
+  outline: none;
+  transition: border-color 0.3s; /* Add a smooth transition for the line color */
+  border-bottom: 2px solid #ccc; /* Gray horizontal line */
+  padding: 10px;
+  font-size: 16px;
+  &:focus {
+    border-color: #555; /* Change line color when selected */
+  }
+}
+
+.PhoneInput {
+  width: 100%;
+}
+
+.initiation-button {
+  background: #37526d; /* Slightly lighter blue background color */
+  border: none;
+  margin-top: 20px;
+  border-radius: 8px; /* Slightly rounded corners */
+  padding: 12px 24px; /* Increased padding for a more substantial button */
+  font-size: 16px;
+  color: #fff; /* White text color */
+  cursor: pointer;
+  transition: box-shadow 0.3s; /* Add box-shadow transition for hover */
+
+  &:hover {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Subtle box shadow on hover */
+  }
+}
+
+/* Add this CSS to your global or component-specific stylesheet */
+.fade-in {
+  animation: fadeIn 1.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.loading-screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Updated CSS for Chat Component */
+.chat-app {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center horizontally */
+  justify-content: center; /* Center vertically */
+  width: 100%;
+}
+
+.chat-messages {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  overflow-y: auto;
+  width: 100%;
+  margin-top: 10px;
+  max-width: 60%;
+  border-radius: 10px;
+  background-color: #f5f5f5;
+  box-sizing: border-box;
+  max-height: 500px;
+  min-height: 500px;
+}
+
+@media (max-width: 1000px) {
+  .chat-messages {
+    max-width: 100%;
+  }
+}
+
+.chat-messages h2 {
+  text-align: center;
+}
+
+/* ... Other CSS Rules ... */
+
+.message {
+  max-width: 70%;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 20px;
+  position: relative;
+  font-size: 16px;
+  word-wrap: break-word;
+}
+
+.human {
+  align-self: flex-start;
+  background-color: #e9e9eb; /* Classic blue color */
+  color: #242424;
+}
+
+.bot {
+  align-self: flex-end;
+  background-color: #1186ff; /* Light green color */
+  color: #ffffff;
+}
+
+.link {
+  cursor: pointer;
+  text-decoration: underline;
+}
